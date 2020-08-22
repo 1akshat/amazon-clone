@@ -2,8 +2,7 @@
   display: flex;
   height: 60px;
   background-color: #131921;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   align-items: center;
   z-index: 100;
 }
