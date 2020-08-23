@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="banner">
       <img
         className="banner-image"
-        src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Rajeshwari/AugOffers/GW22Aug/DesktopHero_1500x600._CB407658174_.jpg"
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2020/X-site/Multititle/Aug/1500x600_Hero-Tall_ft._CB407693867_.jpg"
         alt="banner-image"
       />
     </div>
