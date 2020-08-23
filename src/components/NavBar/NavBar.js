@@ -3,12 +3,19 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../StateProvider/StateProvider";
+import { auth } from "../../firebase";
 import "./NavBar.css";
 
 const NavBar = () => {
   // const [state, dispatch] = useStateValue();
   // On Destructuring:
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
+
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <div className="navbar">
@@ -26,10 +33,12 @@ const NavBar = () => {
       </div>
 
       <div className="navbar-nav-icons">
-        <Link className="navbar-link" to="/login">
-          <div className="navbar-options">
-            <span className="navbar-option-line1">Hello Akshat,</span>
-            <span className="navbar-option-line2">Sign In</span>
+        <Link className="navbar-link" to={!user && "/login"}>
+          <div onClick={login} className="navbar-options">
+            <span className="navbar-option-line1">Hello {user?.email},</span>
+            <span className="navbar-option-line2">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
         <Link className="navbar-link" to="/">
