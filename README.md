@@ -21,7 +21,7 @@ Features and Concepts Used:
 
 # Features
 
-A User can signup/ login and visit the homepage. Inside, a user can view product details and add to basket for the final checkout. User is able to visit the Checkout page to view the details of the products added into the basket and is also allowed to remove any product from the basket. Final amount of the products is visible on the checkout page.
+A user can signup/ login and visit the homepage. Inside, a user can view product details and add to the basket for the final checkout. The user is able to visit the Checkout page to view the details of the products added into the basket and is also allowed to remove any product from the basket. The final amount of the products is visible on the checkout page.
 
 # Preview
 
