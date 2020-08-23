@@ -2,9 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { useStateValue } from "../StateProvider/StateProvider";
 import "./NavBar.css";
 
 const NavBar = () => {
+  // const [state, dispatch] = useStateValue();
+  // On Destructuring:
+  const [{ basket }] = useStateValue();
+
   return (
     <div className="navbar">
       <Link to="/">
@@ -42,7 +47,7 @@ const NavBar = () => {
         <Link to="/checkout">
           <div className="navbar-option-basket">
             <ShoppingBasketIcon className="navbar-basket-icon" />
-            <span className="navbar-basket-number">0</span>
+            <span className="navbar-basket-number">{basket?.length}</span>
           </div>
         </Link>
       </div>
